@@ -4,4 +4,4 @@ app=FastAPI()
 
 @app.get('/')
 def root():
-    return {"message":"Qble Backend runnning just now added CI V2 Hello World"}
+    return {"message":"Qble Backend runnning helloo guyzzz"}
