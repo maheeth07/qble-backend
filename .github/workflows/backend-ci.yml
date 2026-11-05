@@ -1,0 +1,21 @@
+name:QBLE Backend CI Setup
+
+on:
+  pull_request
+    branches:
+      -main
+
+jobs:
+  backend-check:
+    runs-on:ubuntu_latest
+    steps:
+      -name:Checkout Repository
+       uses:actions/checkout@v4
+
+      -name:Setup Python
+       uses:actions/setup-pythonv@5
+       with:
+        python-version:"3.12"
+      
+      -name:Check Python Syntax
+       run:python -m compileall -q app
